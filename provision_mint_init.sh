@@ -7,7 +7,7 @@ function GTERM_LOAD()
 	GTERM_DIR="$HOME/.gterm"
 	GTERM_FILE="$GTERM_DIR/gterm-profile.dconf"
   	GTERM_RC="$GTERM_DIR/gterm.rc"
-	GTERM_URL="https://raw.githubusercontent.com/rm-tic/provision-mint/master/gterm-profile.dconf"
+	GTERM_URL="https://raw.githubusercontent.com/rm-tic/provision-mint-work/master/gterm-profile.dconf"
 
 
 	if [[ ! -d $GTERM_DIR  || "$(cat $GTERM_RC)" != "0" ]]; then
@@ -108,8 +108,8 @@ function INSTALL()
 
 function CLONE_REPO()
 {
-	REPO_DIR="/tmp/provision-mint"
-	REPO_URL="https://github.com/rm-tic/provision-mint.git"
+	REPO_DIR="/tmp/provision-mint-work"
+	REPO_URL="https://github.com/rm-tic/provision-mint-work.git"
 
 	echo "Cloning Repository in $REPO_DIR"
 
