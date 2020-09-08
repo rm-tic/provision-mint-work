@@ -19,7 +19,7 @@ Esta receita provisiona uma estação de trabalho recém formatada com Linux Min
 **SHELL**
 ```bash
 #WGET
-wget -qO- https://raw.githubusercontent.com/rm-tic/provision-mint/master/provision_mint_init.sh | bash -
+wget -qO- https://raw.githubusercontent.com/rm-tic/provision-mint-work/master/provision_mint_init.sh | bash -
 
 ```
 
