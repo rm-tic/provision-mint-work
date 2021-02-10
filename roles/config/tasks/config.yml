@@ -128,6 +128,8 @@
       ss() { /bin/ss $@ | column -t ;}
 
       #TMUX
+      t2() { tmux new-session\; split-window -v -p 50\; select-pane -t0 ;}
+      
       t3() { tmux new-session\; split-window -v -p 66\; split-window -v\; select-pane -t0 ;}
 
       t4()
@@ -158,14 +160,11 @@
 
 - name: Copy Pictures to ~/Imagens/Wallpapers
   copy:
-    src: "./{{ item }}"
-    dest: "/home/{{ ansible_env.SUDO_USER }}/Imagens/Wallpapers/{{ item }}"
+    src: "root_1920x1080.png"
+    dest: "/home/{{ ansible_env.SUDO_USER }}/Imagens/Wallpapers/root_1920x1080.png"
     owner: "{{ ansible_env.SUDO_USER }}"
     group: "{{ ansible_env.SUDO_USER }}"
     mode: 0644
-  loop:
-    - root_2560x1080.png
-    - root_1920x1080.png
 
 - name: Set Default Wallpaper
   dconf:
@@ -175,4 +174,3 @@
   become_user: "{{ ansible_env.SUDO_USER }}"
   loop: "{{ wallpaper }}"
   tags: install_themes
-  

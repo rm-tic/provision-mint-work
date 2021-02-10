@@ -45,3 +45,12 @@
     method: system
   with_items: "{{ flathub_pkgs }}"
   tags: flatpak
+
+- name: XDM | Download Latest Version
+  ansible.builtin.unarchive:
+    src: {{ url_xz_xdm.stdout }}
+    dest: /tmp/xdm
+    remote_src: yes
+
+- name: XDM | Install
+  command: /tmp/xdm/install.sh

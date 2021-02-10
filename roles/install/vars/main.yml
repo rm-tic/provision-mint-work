@@ -34,8 +34,6 @@ apt_repo_urls:
     filename: vscode
 
 apt_repo_ppa:
-  - url: ppa:sebastian-stenzel/cryptomator #Cryptomator
-    filename: cryptomator
   - url: ppa:graphics-drivers/ppa #NvidiaDrivers
     filename: ppa_graphics
     
@@ -43,16 +41,15 @@ pkgs_urls:
   - "{{ url_deb_autokey.stdout_lines[0] }}" #AutoKey
   - "{{ url_deb_autokey.stdout_lines[1] }}" #AutoKey
   - "{{ url_deb_etcher.stdout }}" #BalenaEtcher
-  #- https://download.teamviewer.com/download/linux/teamviewer_amd64.deb #TeamViewer
+  - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb #TeamViewer
   - "{{ url_deb_vagrant.stdout }}" #Vagrant
 
 pkgs:
-  #- anki
-  #- audacity
+  - anki
+  - audacity
   - build-essential
-  #- calibre
+  - calibre
   - code
-  - cryptomator
   - docker-ce
   - docker-ce-cli
   - containerd.io
@@ -61,7 +58,7 @@ pkgs:
   - gimp
   - gnome-tweaks
   - google-chrome-stable
-  #- handbrake
+  - handbrake
   - htop
   - inkscape
   - intel-microcode
@@ -70,14 +67,9 @@ pkgs:
   - p7zip-full
   - p7zip-rar
   - peek
-  #- preload
-  #- qbittorrent
-  - remmina
-  - remmina-plugin-rdp
-  - remmina-plugin-vnc
+  - qbittorrent
   - scrcpy
-  #- steam
-  #- teamviewer
+  - teamviewer
   - tmux
   - toilet
   - typora
@@ -88,10 +80,12 @@ pkgs:
   - zsh
 
 flathub_pkgs:
-  #- com.discordapp.Discord
-  #- com.github.johnfactotum.Foliate
-  - com.meetfranz.Franz
-  #- com.obsproject.Studio
+  - com.discordapp.Discord
+  - com.obsproject.Studio
   - com.getpostman.Postman
-  #- com.skype.Client
   - com.wps.Office
+  - com.slack.Slack
+  - us.zoom.Zoom
+  - io.dbeaver.DBeaverCommunity
+  - org.telegram.desktop
+  - io.bit3.WhatsAppQT

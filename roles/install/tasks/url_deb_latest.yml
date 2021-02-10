@@ -20,3 +20,10 @@
   register: url_deb_vagrant
   args:
     warn: false
+
+- name: Get XDM Package Latest Version URL
+  shell: >-
+    curl -s "https://api.github.com/repos/subhra74/xdm/releases/latest" | egrep -o 'https.*tar.xz'
+  register: url_xz_xdm
+  args:
+    warn: false

@@ -150,7 +150,7 @@ echo "+----------------------------------+"
 echo "| Invencible (Ansible)             |"
 echo "| Project: provision-mint-work     |"
 echo "| Author: Rodrigo Martins (IceTux) |"
-echo "| Creation Date: 2020-09-08        |"
+echo "| Creation Date: 2021-02-10        |"
 echo "+----------------------------------+"
 echo
 echo
